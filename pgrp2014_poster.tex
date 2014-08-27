@@ -123,10 +123,16 @@ subcolspace=8mm]{tikzposter}
   \column{0.5}
 
   \block{Preliminary results}{
+    \innerblock[]{}{
     \begin{tikzfigure}
-      \includegraphics[width=0.25\textwidth]{minted_r-crop}
+      \includegraphics[width=0.2\textwidth]{minted_r-crop}
     \end{tikzfigure}
-    
+    }
+
+    \begin{center}\small
+      Table 1: Nested linear mixed model testing for effect 
+      of population on bark thickness.
+    \end{center}
      
      \begin{tikzfigure} 
       \centering
@@ -143,6 +149,33 @@ subcolspace=8mm]{tikzposter}
       \end{tabular}
     \end{tikzfigure}
 
+    \innerblock[]{}{
+    \begin{tikzfigure}
+      \includegraphics[width=0.25\textwidth]{minted_mantel-crop}
+    \end{tikzfigure}
+    }
+
+    \begin{center}
+      \small
+    Table 2: Significant Mantel correlations ($p < 0.05$) for averaged and 
+    individual bark thickness measurements to BioClim variables.
+    \end{center}
+
+
+    \begin{tikzfigure} 
+      \centering
+      \begin{tabular}{lrrrrrrrr}
+        \toprule
+        &  \multicolumn{2}{c}{Averaged} & \multicolumn{6}{c}{Individual}\\
+        Species & Bio10 & Bio12 & Bio2 & Bio7 & Bio9 & Bio12 & Bio13 & Bio16 \\
+        \midrule
+        \textit{P.\ elliotti} & & 0.47 & & & & & & \\
+        \textit{P.\ palustris} & & & 0.07 & 0.05 & 0.05 & 0.07 & 0.04 & 0.05\\
+        \textit{P.\ serotina} & & & & & & & & \\
+        \textit{P.\ taeda} & 0.24 & & & & & & \\
+        \bottomrule
+      \end{tabular}
+    \end{tikzfigure}
     
 }
 
