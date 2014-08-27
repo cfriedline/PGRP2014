@@ -3,7 +3,7 @@ blockverticalspace=15mm, colspace=15mm,
 subcolspace=8mm]{tikzposter}
 
 \usepackage{graphicx}
-
+\usepackage{booktabs}
 \tikzposterlatexaffectionproofoff
 
 \title{\parbox{\linewidth}{\centering Barking up the Right Trees: the
@@ -101,17 +101,24 @@ subcolspace=8mm]{tikzposter}
         elliotti})]
       \includegraphics[width=0.4\textwidth]{map.png} 
     \end{tikzfigure}
-  }
 
-  \note[targetoffsetx=50mm, targetoffsety=-27mm, width=8.5cm, roundedcorners=10] {
-    \footnotesize Species (ind/pop)
-    \begin{itemize}
-    \item \textit{P.\ elliotti} (55/3)
-    \item \textit{P.\ palustris} (297/18)
-    \item \textit{P.\ serotina} (23/1)
-    \item \textit{P.\ taeda} (370/21)
-    \end{itemize}
-  }
+  \innerblock[]{}{
+      \begin{tikzfigure}
+      \footnotesize  
+      \centering
+      \begin{tabular}{lrrrr}
+        \toprule
+        Species & N & Pops & Mean DBH (cm) & Mean Height (m) \\
+        \midrule
+        \textit{P.\ elliotti} & 55 & 3 & 39.5 (10.0) & 24.8 (5.1) \\ 
+        \textit{P.\ palustris} & 297 & 18 &  44.2 (8.2) & 22.9 (4.2) \\
+        \textit{P.\ serotina} & 23 & 1 & 29.4 (7.8) & 20.2 (6.2) \\
+        \textit{P.\ taeda} & 370 & 21 & 47.5 (12.9) & 27.0 (6.2) \\
+        \bottomrule
+      \end{tabular}
+    \end{tikzfigure}
+  } 
+}
 
   \column{0.5}
 
