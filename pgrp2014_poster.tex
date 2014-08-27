@@ -103,14 +103,19 @@ subcolspace=8mm]{tikzposter}
   }
 
   \block{Project status}{
-    \begin{tikzfigure}[Sampled locations marked by triangle, color
-      indicates species. Overlay is the natural range of the
-      populations \\ (blue=\textit{P.\ taeda}, yellow=\textit{P.\
-        palustris}, green=\textit{P.\ serotina}, magenta=\textit{P.\
-        elliotti})]
+    \begin{tikzfigure}
       \includegraphics[width=0.4\textwidth]{map.png} 
     \end{tikzfigure}
+     \begin{center}
+      Figure 1: Sampled locations marked by triangle, color
+      indicates species. Overlay is the natural range of the
+      populations. \\(blue=\textit{P.\ taeda}, yellow=\textit{P.\
+        palustris}, green=\textit{P.\ serotina}, magenta=\textit{P.\
+        elliotti})
+    \end{center}
 
+    \vspace*{1em}
+   
   \innerblock[]{}{
       \begin{tikzfigure}
       \centering
@@ -136,9 +141,10 @@ subcolspace=8mm]{tikzposter}
       \includegraphics[width=0.2\textwidth]{minted_r-crop}
     \end{tikzfigure}
     }
+    \vspace*{1em}
+   
 
     \begin{center}
-      \small
       Table 1: Nested linear mixed model testing for effect 
       of population on bark thickness.
     \end{center}
@@ -158,6 +164,9 @@ subcolspace=8mm]{tikzposter}
         \bottomrule
       \end{tabular}
     \end{tikzfigure}
+   
+    \vspace*{2em}
+   
 
     \innerblock[]{}{
     \begin{tikzfigure}
@@ -165,10 +174,12 @@ subcolspace=8mm]{tikzposter}
     \end{tikzfigure}
     }
 
+    \vspace*{1em}
+   
+
     \begin{center}
-      \small
     Table 2: Significant Mantel correlations ($p < 0.05$) for averaged and 
-    individual bark thickness measurements to \\ BioClim variables*. All Mantel
+    individual bark thickness measurements to BioClim variables*. All Mantel
     tests between bark thickness and lat/lon were not significant.
     \end{center}
 
