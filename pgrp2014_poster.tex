@@ -12,15 +12,45 @@ subcolspace=8mm]{tikzposter}
 
 \institute{Virginia Commonwealth University}
 
-\author{Christopher J. Friedline, Ph.D. \\ PI: Andrew J. Eckert, Ph.D.}
+\author{PI: Christopher J. Friedline, Ph.D. \\ Sponsor: Andrew J. Eckert, Ph.D.}
 
-\usetheme{Default}
+
+\definecolor{vcugold}{RGB}{248,184,0}
+
+\definecolorstyle{cjfStyle} {
+     \definecolor{colorOne}{named}{lightgray}
+     \definecolor{colorTwo}{named}{black}
+     \definecolor{colorThree}{named}{vcugold}
+ }{
+     % Background Colors
+     \colorlet{backgroundcolor}{colorOne}
+     \colorlet{framecolor}{black}
+     % Title Colors
+     \colorlet{titlefgcolor}{vcugold}
+     \colorlet{titlebgcolor}{colorTwo}
+     % Block Colors
+     \colorlet{blocktitlebgcolor}{colorThree}
+     \colorlet{blocktitlefgcolor}{black}
+     \colorlet{blockbodybgcolor}{white}
+     \colorlet{blockbodyfgcolor}{black}
+     % Innerblock Colors
+     \colorlet{innerblocktitlebgcolor}{white}
+     \colorlet{innerblocktitlefgcolor}{black}
+     \colorlet{innerblockbodybgcolor}{colorThree!30!white}
+     \colorlet{innerblockbodyfgcolor}{black}
+     % Note colors
+     \colorlet{notefgcolor}{black}
+     \colorlet{notebgcolor}{colorThree!20!white}
+     \colorlet{noteframecolor}{colorTwo}
+}
+
+\usetheme{Default}\usecolorstyle{cjfStyle}
 
 \begin{document}
 
 \maketitle
 
-\block{Project Summary}{The main goal of this project is to
+\block{Project Summary}{\LARGE The main goal of this project is to
   investigate bark thickness as a fire-adapted phenotype in four,
   economically-important, species of pines with a range along the
   eastern and south-eastern United States. The evolution of this
@@ -37,8 +67,8 @@ subcolspace=8mm]{tikzposter}
   evolutionary biology and serve to inform and improve breeding
   programs and land management initiatives.  }
 
-\begin{columns} % See Section 4.4
-  \column{0.5} % See Section 4.4
+\begin{columns}
+  \column{0.5}
   \block{Objectives}{
     \begin{itemize}
     \item Field sampling: needle collection, bark thickness,
