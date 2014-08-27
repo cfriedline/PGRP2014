@@ -1,0 +1,14 @@
+\documentclass{article}
+\thispagestyle{empty}
+\usepackage{minted}
+\begin{document}
+
+
+\begin{minted}[gobble=2]{python}
+    def run_mantel(bark, bio):
+        m = mantel(as_dist(vegdist(bark, method="eucl")), 
+                   as_dist(vegdist(bio, method="gower")))
+        return format_mantel(m)
+\end{minted}
+
+\end{document}

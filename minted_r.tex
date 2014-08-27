@@ -1,0 +1,13 @@
+\documentclass{article}
+\thispagestyle{empty}
+\usepackage{minted}
+\begin{document}
+
+
+\begin{minted}{rd}
+  fit1 <- value ~ 1 + (1 | Pop) + (1 | Name)
+  fit2 <- value ~ 1 + (1 | Name)
+  a <- anova(fit1, fit2)
+\end{minted}
+
+\end{document}
