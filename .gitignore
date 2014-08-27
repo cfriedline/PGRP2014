@@ -1,1 +1,10 @@
 *.docx
+auto
+.[#].[#]
+*.aux
+*_latexmk
+*.fls
+*.log
+*.pdf
+*.synctex.gz
+*.png
