@@ -4,6 +4,8 @@ subcolspace=8mm]{tikzposter}
 
 \usepackage{graphicx}
 \usepackage{booktabs}
+\usepackage{listings}
+
 \tikzposterlatexaffectionproofoff
 
 \title{\parbox{\linewidth}{\centering Barking up the Right Trees: the
@@ -104,16 +106,15 @@ subcolspace=8mm]{tikzposter}
 
   \innerblock[]{}{
       \begin{tikzfigure}
-      \footnotesize  
       \centering
-      \begin{tabular}{lrrrr}
+      \begin{tabular}{lrrrrrr}
         \toprule
-        Species & N & Pops & Mean DBH (cm) & Mean Height (m) \\
+        Species & N & Pops & DBH (cm) & $r_{DBH}$ & Height (m) & $r_{Height}$\\
         \midrule
-        \textit{P.\ elliotti} & 55 & 3 & 39.5 (10.0) & 24.8 (5.1) \\ 
-        \textit{P.\ palustris} & 297 & 18 &  44.2 (8.2) & 22.9 (4.2) \\
-        \textit{P.\ serotina} & 23 & 1 & 29.4 (7.8) & 20.2 (6.2) \\
-        \textit{P.\ taeda} & 370 & 21 & 47.5 (12.9) & 27.0 (6.2) \\
+        \textit{P.\ elliotti} & 55 & 3 & 39.5 (10.0) & 0.5 & 24.8 (5.1) & 0.04 \\ 
+        \textit{P.\ palustris} & 297 & 18 &  44.2 (8.2) & 0.36 & 22.9 (4.2) & -0.08 \\
+        \textit{P.\ serotina} & 23 & 1 & 29.4 (7.8) & 0.02 & 20.2 (6.2) & 0.02 \\
+        \textit{P.\ taeda} & 370 & 21 & 47.5 (12.9) & 0.46 & 27.0 (6.2) & 0.21 \\
         \bottomrule
       \end{tabular}
     \end{tikzfigure}
@@ -122,10 +123,41 @@ subcolspace=8mm]{tikzposter}
 
   \column{0.5}
 
-  \block{References}{
+  \block{Preliminary results}{
+    \innerblock[]{}{
+    \begin{lstlisting}[language=R]^^J
+      # value = residuals of bark ~ DBH + Height^^J
+      fit1 = lmer(value~1 + (1|Pop) +(1|Name), d, REML=F)^^J 
+      fit2 = lmer(value~1 + (1|Name), d, REML=F)^^J 
+      a = anova(fit1, fit2)^^J
+    \end{lstlisting}^^J 
+    }
+
+     \begin{tikzfigure} 
+      \centering
+      \begin{tabular}{lrrrrrrr}
+        \toprule
+        & \multicolumn{2}{c}{Model 1} & \multicolumn{2}{c}{Model 2} \\
+        Species & $lnL$ & $\sigma^2_{Name/Pop/Resid}$ & $lnL$ & $\sigma^2_{Name/Resid}$ & $\chi^2$ & $p$\\ 
+        \midrule
+        \textit{P.\ elliotti} & 76.4 & 0.039/0.000/0.016 & 76.4 & 0.039/0.000/0.016 & 0 & 1\\
+        \textit{P.\ palustris} & 593.7 & 0.018/0.005/0.013 & 577.8 & 0.023/0.013 & 31.7 & $\mathbf{1.8e^-8}$ \\
+        \textit{P.\ serotina} & - & -  & 52.4 & 0.036/0.009 & - & -\\
+        \textit{P.\ taeda} & -693.9 & 0.039/0.010/0.120 & -706.3 & 0.049/0.120 & 24.7 & $\mathbf{6.6e^-7}$ \\
+        \bottomrule
+      \end{tabular}
+    \end{tikzfigure}
+  }
+
+  
+  \block{Conclusions} {
     
   }
   
+
+  \block{References}{
+    
+  } 
   \block{Contact}{
     \begin{itemize}
     \item e-mail: cfriedline@vcu.edu
