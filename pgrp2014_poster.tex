@@ -7,9 +7,17 @@ subcolspace=8mm]{tikzposter}
 
 \tikzposterlatexaffectionproofoff
 
+\settitle{ \centering \vbox{
+     \@titlegraphic \\[\TP@titlegraphictotitledistance] \centering
+     \color{titlefgcolor} {\bfseries \LARGE \sc \@title \par}
+     \vspace*{1em}
+     {\large \@author \par} \vspace*{1em} {\Large \@institute}
+}}
+
+
 \title{\parbox{\linewidth}{\centering Barking up the Right Trees: the
     Influence of Forest Fire on the Genetic Architecture of Pine
-    Populations in the \\ Southeastern United States}}
+    Populations in the Southeastern United States}}
 
 \institute{Virginia Commonwealth University}
 
@@ -50,7 +58,7 @@ subcolspace=8mm]{tikzposter}
 
 \begin{document}
 
-\maketitle[width=0.96\textwidth]
+\maketitle[width=0.96\textwidth, titletextscale=5]
 
 \block{Project Summary}{\LARGE The main goal of this project is to
   investigate bark thickness as a fire-adapted phenotype in four,
@@ -189,20 +197,18 @@ subcolspace=8mm]{tikzposter}
 
   
   \block{Conclusions} {
-    
-  }
-  
-
-  \block{References}{
-    
-  } 
-  \block{Contact}{
     \begin{itemize}
-    \item e-mail: cfriedline@vcu.edu
-    \item twitter: @noituloveand
-    \item web: http://chris.friedline.net
-    \item github: @cfriedline
+    \item There is evidence of local adaptation (i.e., effect of
+      population) in the bark thickness phenotype.
+    \item Environmental correlation currently under-powered due to
+      sampling issues or that bark thickness is not driven by the
+      tested variables.
+    \item Though climate is structured spatially, the phenotype
+      appears not to be.
     \end{itemize}
+  }
+
+  \block{References} {
     
   }
 
