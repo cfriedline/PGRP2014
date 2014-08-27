@@ -4,7 +4,6 @@ subcolspace=8mm]{tikzposter}
 
 \usepackage{graphicx}
 \usepackage{booktabs}
-\usepackage{listings}
 
 \tikzposterlatexaffectionproofoff
 
@@ -124,15 +123,11 @@ subcolspace=8mm]{tikzposter}
   \column{0.5}
 
   \block{Preliminary results}{
-    \innerblock[]{}{
-    \begin{lstlisting}[language=R]^^J
-      # value = residuals of bark ~ DBH + Height^^J
-      fit1 = lmer(value~1 + (1|Pop) +(1|Name), d, REML=F)^^J 
-      fit2 = lmer(value~1 + (1|Name), d, REML=F)^^J 
-      a = anova(fit1, fit2)^^J
-    \end{lstlisting}^^J 
-    }
-
+    \begin{tikzfigure}
+      \includegraphics[width=0.25\textwidth]{minted_r-crop}
+    \end{tikzfigure}
+    
+     
      \begin{tikzfigure} 
       \centering
       \begin{tabular}{lrrrrrrr}
@@ -147,7 +142,9 @@ subcolspace=8mm]{tikzposter}
         \bottomrule
       \end{tabular}
     \end{tikzfigure}
-  }
+
+    
+}
 
   
   \block{Conclusions} {
