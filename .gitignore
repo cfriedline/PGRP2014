@@ -8,3 +8,4 @@ auto
 *.pdf
 *.synctex.gz
 *.png
+*.pyg
