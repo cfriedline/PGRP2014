@@ -1,5 +1,5 @@
 \documentclass[25pt, a0paper, portrait, margin=0mm, innermargin=15mm,
-blockverticalspace=15mm, colspace=15mm,
+blockverticalspace=14mm, colspace=15mm,
 subcolspace=8mm]{tikzposter}
 
 \usepackage{graphicx}
@@ -23,7 +23,11 @@ subcolspace=8mm]{tikzposter}
 
 \author{PI: Christopher J. Friedline, Ph.D. \\ Sponsor: Andrew J. Eckert, Ph.D.}
 
-\titlegraphic{\includegraphics[scale=1]{vculogo}}
+\titlegraphic{\parbox{0.5\linewidth}{\centering
+    \includegraphics[scale=1]{vculogo}
+    \includegraphics[scale=0.17]{nsf}
+  }
+}
 
 \definecolor{vcugold}{RGB}{248,184,0}
 
@@ -73,7 +77,7 @@ subcolspace=8mm]{tikzposter}
   individuals with the goal of uncovering shared genetic architecture
   of these four closely related species. The results of this research,
   while providing new genomic resources for non-model species and
-  augmenting exiting resources, will address fundamental principles in
+  augmenting existing resources, will address fundamental principles in
   evolutionary biology and serve to inform and improve breeding
   programs and land management initiatives.  }
 
@@ -99,14 +103,14 @@ subcolspace=8mm]{tikzposter}
       SNPs from the controls?
     \item Are reconstructed allele frequences at shared candidate SNPs
       correlated more so with reconstructed bark thickness than shared
-      control SNPs across the phy- logeny for these four species?
+      control SNPs across the phylogeny for these four species?
     \item To what extent is natural selection affecting rates of molecular evolution at candidate genes?
     \end{enumerate}
   }
 
   \block{Project status}{
     \begin{tikzfigure}
-      \includegraphics[width=0.4\textwidth]{map.png} 
+      \includegraphics[width=0.37\textwidth]{map.png} 
     \end{tikzfigure}
      \begin{center}
       Figure 1: Sampled locations marked by triangle, color
@@ -116,9 +120,17 @@ subcolspace=8mm]{tikzposter}
         elliotti})
     \end{center}
 
-    \vspace*{1em}
-   
+    %\vspace*{1em}
+    
+    
   \innerblock[]{}{
+    \begin{center}
+      Table 1: Summary statistics for four \textit{Pinus} species; $r$
+      values are correlations with average bark thickness for all
+      individuals per species.
+    \end{center}
+
+
       \begin{tikzfigure}
       \centering
       \begin{tabular}{lrrrrrr}
@@ -147,7 +159,7 @@ subcolspace=8mm]{tikzposter}
    
 
     \begin{center}
-      Table 1: Nested linear mixed model testing for effect 
+      Table 2: Nested linear mixed model testing for effect 
       of population on bark thickness.
     \end{center}
      
@@ -180,7 +192,7 @@ subcolspace=8mm]{tikzposter}
    
 
     \begin{center}
-    Table 2: Significant Mantel correlations ($p < 0.05$) for averaged and 
+    Table 3: Significant Mantel correlations ($p < 0.05$) for averaged and 
     individual bark thickness measurements to BioClim variables*. All Mantel
     tests between bark thickness and lat/lon were not significant.
     \end{center}
