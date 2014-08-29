@@ -4,6 +4,8 @@ subcolspace=8mm]{tikzposter}
 
 \usepackage{graphicx}
 \usepackage{booktabs}
+\usepackage{natbib}
+
 
 \tikzposterlatexaffectionproofoff
 
@@ -87,20 +89,20 @@ subcolspace=8mm]{tikzposter}
       \Large
     \item Field sampling: needle collection, bark thickness,
       DBH, height, GPS
-    \item DNA library preparation (Parchman)
+    \item DNA library preparation \citep{Parchman:MolEcol:2012,Peterson:PlosOne:2012}
     \item DNA Sequencing (HiSeq 2500)
     \item GBS vs. \textit{P. taeda} genome (v1.01, 14.4M scaffolds)
     \end{itemize}
   }
 
-  \block{Hypothesis Testing} {
+  \block{Hypothesis testing} {
     \begin{enumerate}
       \Large
     \item What is the genetic architecture of bark thickness for the four focal pine species that are adapted to fire?
     \item Are candidate SNPs shared across the four focal species, and
       if so, are they shared to a greater degree than randomly sampled
       SNPs from the controls?
-    \item Are reconstructed allele frequences at shared candidate SNPs
+    \item Are reconstructed allele frequencies at shared candidate SNPs
       correlated more so with reconstructed bark thickness than shared
       control SNPs across the phylogeny for these four species?
     \item To what extent is natural selection affecting rates of molecular evolution at candidate genes?
@@ -116,11 +118,8 @@ subcolspace=8mm]{tikzposter}
       indicates species. Overlay is the natural range of the
       populations. \\(blue=\textit{P.\ taeda}, yellow=\textit{P.\
         palustris}, green=\textit{P.\ serotina}, magenta=\textit{P.\
-        elliotti})
-    \end{center}
-
-    %\vspace*{1em}
-    
+        elliottii})
+    \end{center}    
     
   \innerblock[]{}{
     \begin{center}
@@ -136,7 +135,7 @@ subcolspace=8mm]{tikzposter}
         \toprule
         Species & N & Pops & DBH (cm) & $r_{DBH}$ & Height (m) & $r_{Height}$\\
         \midrule
-        \textit{P.\ elliotti} & 55 & 3 & 39.5 (10.0) & 0.5 & 24.8 (5.1) & 0.04 \\ 
+        \textit{P.\ elliottii} & 55 & 3 & 39.5 (10.0) & 0.5 & 24.8 (5.1) & 0.04 \\ 
         \textit{P.\ palustris} & 297 & 18 &  44.2 (8.2) & 0.36 & 22.9 (4.2) & -0.08 \\
         \textit{P.\ serotina} & 23 & 1 & 29.4 (7.8) & 0.02 & 20.2 (6.2) & 0.02 \\
         \textit{P.\ taeda} & 370 & 21 & 47.5 (12.9) & 0.46 & 27.0 (6.2) & 0.21 \\
@@ -170,7 +169,7 @@ subcolspace=8mm]{tikzposter}
         \cmidrule(l){2-3} \cmidrule(l){4-5}
         Species & $lnL$ & $\sigma^2_{Name/Pop/Resid}$ & $lnL$ & $\sigma^2_{Name/Resid}$ & $\chi^2$ & $p$\\ 
         \midrule
-        \textit{P.\ elliotti} & 76.4 & 0.039/0.000/0.016 & 76.4 & 0.039/0.000/0.016 & 0 & 1\\
+        \textit{P.\ elliottii} & 76.4 & 0.039/0.000/0.016 & 76.4 & 0.039/0.000/0.016 & 0 & 1\\
         \textit{P.\ palustris} & 593.7 & 0.018/0.005/0.013 & 577.8 & 0.023/0.013 & 31.7 & $\mathbf{1.8e^-8}$ \\
         \textit{P.\ serotina} & & & 52.4 & 0.036/0.009 & & \\
         \textit{P.\ taeda} & -693.9 & 0.039/0.010/0.120 & -706.3 & 0.049/0.120 & 24.7 & $\mathbf{6.6e^-7}$ \\
@@ -205,7 +204,7 @@ subcolspace=8mm]{tikzposter}
         \cmidrule(l){2-3} \cmidrule(l){4-9}
         Species & Bio10 & Bio12 & Bio2 & Bio7 & Bio9 & Bio12 & Bio13 & Bio16 \\
         \midrule
-        \textit{P.\ elliotti} & & 0.47 & & & & & & \\
+        \textit{P.\ elliottii} & & 0.47 & & & & & & \\
         \textit{P.\ palustris} & & & 0.07 & 0.05 & 0.05 & 0.07 & 0.04 & 0.05\\
         \textit{P.\ serotina} & & & & & & & & \\
         \textit{P.\ taeda} & 0.24 & & & & & & \\
@@ -225,18 +224,20 @@ subcolspace=8mm]{tikzposter}
   
   \block{Conclusions} {
     \begin{itemize}\Large
-    \item There is evidence of local adaptation (i.e., effect of
-      population) in the bark thickness phenotype.
-    \item Environmental correlation currently under-powered due to
-      sampling issues or that bark thickness is not driven by the
-      tested variables.
+    \item There is evidence of local adaptation in the bark thickness
+      phenotype (Table 2).
+    \item Environmental correlations present but may suffer from
+      sampling or other bias (Table 3).
     \item Though climate is structured spatially, the phenotype
-      appears not to be.
+      appears not to be (Table 3).
     \end{itemize}
   }
-
-  \block{References} {
-    
+  
+  \block{} {
+      \verysmall 
+      \vspace{-0.4em}
+      \bibliographystyle{sysbio}
+      \bibliography{refs}
   }
 
 \end{columns}
