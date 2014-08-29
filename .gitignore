@@ -9,3 +9,6 @@ auto
 *.synctex.gz
 *.png
 *.pyg
+*.bbl
+*.blg
+*.dvi
