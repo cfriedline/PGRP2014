@@ -1,6 +1,6 @@
 \documentclass[25pt, a0paper, 
 portrait, margin=0mm, innermargin=10mm,
-blockverticalspace=20mm, colspace=15mm,
+blockverticalspace=15mm, colspace=15mm,
 subcolspace=8mm]{tikzposter}
 
 \usepackage{graphicx}
@@ -65,7 +65,7 @@ subcolspace=8mm]{tikzposter}
 
 \maketitle[width=0.972\textwidth, titletextscale=5]
 
-\block{Project summary}{\Large The main goal of this project is to
+\block{Project summary}{\Large Thl\ main goal of this project is to
   investigate bark thickness as a \textbf{fire-adapted phenotype}
   \citep{He:NewPhytol:2012} in four, biologically and
   economically-important, species of pines ranging along the
@@ -89,8 +89,9 @@ subcolspace=8mm]{tikzposter}
     \begin{itemize}
       \large
     \item Field sampling: needle collection, bark thickness,
-      DBH, height, GPS
-    \item DNA library preparation \citep{Parchman:MolEcol:2012,Peterson:PlosOne:2012}
+      DBH, height, GPS (54\%)
+    \item Bioinformatic pipelines and code development (99.9\%)
+    \item DNA library preparation \citep{Parchman:MolEcol:2012,Peterson:PlosOne:2012} (5\%)
     \item DNA Sequencing (HiSeq 2500)
     \item GBS vs. \textit{P. taeda} genome (v1.01, 14.4M scaffolds)
     \end{itemize}
@@ -122,8 +123,6 @@ subcolspace=8mm]{tikzposter}
         elliottii})
     \end{center}    
     
-    \vspace*{0.1em}
-  
     \innerblock[]{}{
     \begin{center}
       Table 1: Summary statistics for four \textit{Pinus} species; $r$
@@ -232,13 +231,14 @@ subcolspace=8mm]{tikzposter}
     \item Environmental correlations are present but may currently
       suffer from under-sampling or other bias (Table 3).
     \item Though climate is structured spatially, the phenotype
-      appears not to be (Table 3).
+      appears not to be; historical demography unlikely confounding
+      results (Table 3).
     \end{itemize}
   }
   
-  \block{} {
-      \footnotesize 
-      \vspace{-0.4em}
+  \block{References} {
+      \small
+      \renewcommand{\refname}{\vspace{-1.25em}} 
       \bibliographystyle{sysbio}
       \bibliography{refs}
   }
